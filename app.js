@@ -13,7 +13,6 @@
 document.body.addEventListener('keydown', function(e) {
     if (e.key == "Escape") {
         removeTextarea();
-        listNotes();
         setFocusToNotetitle();
     }
   });
