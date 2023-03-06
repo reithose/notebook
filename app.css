@@ -5,239 +5,246 @@
  *  Source: https://github.com/syndicatefx/notebook
  *  License: MIT
  */
- :root {
-	--bg: #f9f9f9;
-	--bg-muted: #f7f7f7;
-	--text: #333;
-	--border: #ddd;
-	--focus-ring: lime;
+:root {
+  --bg: #f9f9f9;
+  --bg-muted: #f7f7f7;
+  --text: #333;
+  --border: #ddd;
+  --focus-ring: lime;
 }
 
 @font-face {
-    font-family: 'IBMPlexMono';
-    font-weight: 400;
-    font-style: normal;
-    src: url("IBMPlexMono-Regular.woff2") format("woff2");
-    font-display: swap;
+  font-family: "IBMPlexMono";
+  font-weight: 400;
+  font-style: normal;
+  src: url("IBMPlexMono-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 
 ::selection {
-    background-color: var(--focus-ring);
+  background-color: var(--focus-ring);
 }
 
 :focus {
-	outline: 3px solid transparent;
-	box-shadow: 0 0 0 2px var(--focus-ring);
+  outline: 3px solid transparent;
+  box-shadow: 0 0 0 2px var(--focus-ring);
 }
-  
+
 :is(aside, textarea)::-webkit-scrollbar {
-    width: 10px
+  width: 10px;
 }
 :is(aside, textarea)::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
-:is(aside, textarea)::-webkit-scrollbar-thumb{
-    background-color: var(--text);
-    border: 2px solid var(--bg);
-    border-radius: 6px;
+:is(aside, textarea)::-webkit-scrollbar-thumb {
+  background-color: var(--text);
+  border: 2px solid var(--bg);
+  border-radius: 6px;
 }
 :is(aside, textarea) {
-    scrollbar-width: thin;
-    scrollbar-color: var(--text) transparent;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text) transparent;
 }
 
 html {
-    font-family: "IBMPlexMono", monospace;
-    font-size: 100%;
-    block-size: 100%;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    text-rendering: optimizeSpeed;
-    -webkit-text-size-adjust: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    box-sizing: border-box;
+  font-family: "IBMPlexMono", monospace;
+  font-size: 100%;
+  block-size: 100%;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeSpeed;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-* , *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    min-block-size: 100%;
-    background-color: var(--bg);
-    color: var(--text);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  min-block-size: 100%;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 svg {
-    max-block-size: 100%;
-    pointer-events: none;
-    display: block;
-    margin-block: 2rem;
-    margin-inline: auto;
+  max-block-size: 100%;
+  pointer-events: none;
+  display: block;
+  margin-block: 2rem;
+  margin-inline: auto;
 }
 
-label, input {
-	display: block;
-    max-inline-size: 24rem;
-    margin-inline: auto;
+label,
+input {
+  display: block;
+  max-inline-size: 24rem;
+  margin-inline: auto;
 }
 
-input, button, textarea {
-	font: inherit;
-	font-size: inherit;
-	color: inherit;
-	letter-spacing: inherit;
+input,
+button,
+textarea {
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: inherit;
 }
-input, button {
-	padding-inline: .75rem;
-	padding-block: .5rem;
-    border-radius: .25rem;
-	border: 1px solid var(--border);
+
+input,
+button {
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border);
 }
 
 input {
-    inline-size: 100%;
-    margin-block-end: 2rem;
-	background-color: var(--bg-muted);
-	border: 1px solid var(--border);
+  inline-size: 100%;
+  margin-block-end: 2rem;
+  background-color: var(--bg-muted);
+  border: 1px solid var(--border);
 }
 
 button {
-	user-select: none;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	gap: .5rem;
-	padding-inline: .5rem;
-	padding-block: .25rem;
-	cursor: pointer;
-    background-color: var(--bg);
-	box-shadow: var(--shadow);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  cursor: pointer;
+  background-color: var(--bg);
+  box-shadow: var(--shadow);
 }
 
 main button {
-    position: absolute;
-    top: .5rem;
-    right: .5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 textarea {
-    line-height: 1.65;
-    inline-size: 100%;
-    block-size: calc(100vh - 58px);
-    padding: 10vmin max(1rem, 50vw - 60ch / 2);
-    resize: none;
-    caret-color: var(--text);
-    border: 0;
+  line-height: 1.65;
+  inline-size: 100%;
+  font-size: 1.1rem;
+  block-size: calc(100vh - 58px);
+  padding: 10vmin max(1rem, 50vw - 60ch / 2);
+  resize: none;
+  caret-color: var(--text);
+  border: 0;
 }
 
 textarea:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
-
 .notebook {
-    block-size: 100vh;
+  block-size: 100vh;
 }
 
 aside {
-    inline-size: 100%;
-    block-size: 100%;
-    padding: 10vmin 5vw;
-    overflow-y: auto;
-    background-color: var(--bg);
+  inline-size: 100%;
+  block-size: 100%;
+  padding: 10vmin 5vw;
+  overflow-y: auto;
+  background-color: var(--bg);
 }
 
 ul {
-    max-inline-size: 24rem;
-    list-style: none;
-    margin-block-end: 4rem;
-    margin-inline: auto;
+  max-inline-size: 24rem;
+  list-style: none;
+  margin-block-end: 4rem;
+  margin-inline: auto;
 }
 
 li {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    margin-block: .5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block: 0.5rem;
 }
 
 li > button:first-of-type {
-    inline-size: 100%;
-    align-items: start;
-    justify-content: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: 0;
-    box-shadow: none;
+  inline-size: 100%;
+  align-items: start;
+  justify-content: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0;
+  box-shadow: none;
 }
 
 li > button:last-child,
 li > div button:first-child {
-    margin-inline-start: auto;
+  margin-inline-start: auto;
 }
 
 li > button:last-child {
-    font-size: 1.5rem;
-    line-height: 1;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 li > div {
-    position: absolute;
-    inline-size: 100%;
-    block-size: 100%;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    padding-block: 1.5rem;
-    background-color: var(--bg);
+  position: absolute;
+  inline-size: 100%;
+  block-size: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 1.5rem;
+  background-color: var(--bg);
 }
 
 main {
-    block-size: 100vh;
+  block-size: 100vh;
 }
 
 main > div {
-    position: relative;
-    inline-size: 100%;
-    block-size: 100%;
-    background-color: var(--bg);
+  position: relative;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--bg);
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    inline-size: 100%;
-    padding: 1rem;
-    background: var(--bg-muted);
-    box-shadow: inset -1px 0 2px hsl(0 0% 0% / 15%);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  inline-size: 100%;
+  padding: 1rem;
+  background: var(--bg-muted);
+  box-shadow: inset -1px 0 2px hsl(0 0% 0% / 15%);
 }
 
 footer div {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 footer a {
-    text-decoration: none;
-    color: var(--text);
-    margin-inline-end: auto;
+  text-decoration: none;
+  color: var(--text);
+  margin-inline-end: auto;
 }
