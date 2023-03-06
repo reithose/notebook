@@ -1,38 +1,45 @@
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="handheldfriendly" content="true">
-	<meta name="mobileoptimized" content="320">
-	<title>notebook</title>
-	<meta name="title" content="notebook">
-	<meta name="description" content="An ultra-simple browser based text app using localstorage">
-	<link rel="stylesheet" href="app.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="handheldfriendly" content="true" />
+    <meta name="mobileoptimized" content="320" />
+    <title>notebook</title>
+    <meta name="title" content="notebook" />
+    <meta
+      name="description"
+      content="An ultra-simple browser based text app using localstorage"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
 
-<body onload="setFocusToNotetitle()">
+  <body onload="setFocusToNotetitle()">
     <div class="notebook">
+      <aside>
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+          <path
+            d="M21 4H7a2 2 0 1 0 0 4h14v13a1 1 0 0 1-1 1H7a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h13a1 1 0 0 1 1 1v1zM5 18a2 2 0 0 0 2 2h12V10H7a3.982 3.982 0 0 1-2-.535V18zM20 7H7a1 1 0 1 1 0-2h13v2z"
+          />
+        </svg>
+        <label>new note title</label>
+        <input
+          type="text"
+          id="note-title"
+          onfocus="removeTextarea()"
+          onkeypress="if (event.key === 'Enter') createNote()"
+        />
+        <ul id="note-list"></ul>
+      </aside>
 
-        <aside>
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M21 4H7a2 2 0 1 0 0 4h14v13a1 1 0 0 1-1 1H7a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h13a1 1 0 0 1 1 1v1zM5 18a2 2 0 0 0 2 2h12V10H7a3.982 3.982 0 0 1-2-.535V18zM20 7H7a1 1 0 1 1 0-2h13v2z"/></svg>
-            <label>new note title</label>
-            <input type="text" id="note-title" onfocus="removeTextarea()" onkeypress="if (event.key === 'Enter') createNote()">
-            <ul id="note-list"></ul>
-        </aside>
-
-        <main></main>
-
+      <main></main>
     </div>
 
     <footer>
-        <a href="https://github.com/syndicatefx/notebook">GitHub</a>
-        <div>
-            ch:<span class="chars">0</span>
-        </div>
+      <a href="https://github.com/syndicatefx/notebook">GitHub</a>
+      <div>ch:<span class="chars">0</span></div>
     </footer>
 
-	<script src="app.js"></script>
-
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
