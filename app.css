@@ -10,9 +10,7 @@
 	--bg-muted: #f7f7f7;
 	--text: #333;
 	--border: #ddd;
-	--shadow: 0 5px 12px -5px hsl(0 0% 0% / 15%);
-	--shadow-inset: inset 0 0 10px hsl(0 0% 0% / 5%);
-	--focus-ring: hsla(110, 100%, 87%, 0.999);
+	--focus-ring: lime;
 }
 
 @font-face {
@@ -24,12 +22,12 @@
 }
 
 ::selection {
-    background-color: var(--bg-muted);
+    background-color: var(--focus-ring);
 }
 
 :focus {
 	outline: 3px solid transparent;
-	box-shadow: 0 0 0 4px var(--focus-ring);
+	box-shadow: 0 0 0 2px var(--focus-ring);
 }
   
 :is(aside, textarea)::-webkit-scrollbar {
