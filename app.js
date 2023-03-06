@@ -64,14 +64,14 @@ function viewNote(e) {
     editor.className = "editor";
     // add a close button, will only appear on small screens
     var editorClose = document.createElement("button");
-    closeTxt = document.createTextNode("Close (esc)");
+    closeTxt = document.createTextNode("close (esc)");
     editorClose.appendChild(closeTxt);
     editor.appendChild(editorClose);
     // the close button removes the editor + resets char counter
     editorClose.onclick = removeTextarea;
     // add a textarea to editor window and fill with item value, or placeholder if a value does not exist yet
     var text = document.createElement("textarea");
-    text.setAttribute("placeholder", "Start writing...");
+    text.setAttribute("placeholder", "start writing...");
     text.setAttribute("spellcheck", "false");
     text.value = localStorage.getItem(itemKey);
     editor.appendChild(text);
@@ -88,7 +88,7 @@ function viewNote(e) {
     });
     // add a download button inside the footer
     var dlBtn = document.createElement("button");
-    var dlBtnTxt = document.createTextNode("Download note");
+    var dlBtnTxt = document.createTextNode("download note");
     dlBtn.className = "dl";
     dlBtn.appendChild(dlBtnTxt);
     document.querySelector("footer > div").appendChild(dlBtn);
@@ -104,15 +104,15 @@ function trashNote(e) {
     // create a faux "confirm" dialog
     var dialog = document.createElement("div");
     // add alert text
-    var dialogText = document.createTextNode("Delete this note?");
+    var dialogText = document.createTextNode("delete this note?");
     dialog.appendChild(dialogText); 
     // add buttons to confirm user wants to delete note
     var yesBtn = document.createElement("button");
-    var yesText = document.createTextNode("Yes");
+    var yesText = document.createTextNode("yes");
     yesBtn.appendChild(yesText);
     dialog.appendChild(yesBtn); 
     var noBtn = document.createElement("button");
-    var noText = document.createTextNode("No");
+    var noText = document.createTextNode("no");
     noBtn.appendChild(noText);
     dialog.appendChild(noBtn); 
     // display the dialog over the list item
