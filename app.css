@@ -153,6 +153,12 @@ textarea:focus {
   box-shadow: none;
 }
 
+h1 {
+  padding: 0 max(1rem, 50vw - 60ch / 2);
+  margin: 0 auto;
+  text-align: center;
+}
+
 .notebook {
   block-size: 100vh;
 }

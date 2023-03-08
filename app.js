@@ -228,12 +228,19 @@ function viewNote(e) {
   editor.appendChild(editorClose);
   // the close button removes the editor + resets char counter
   editorClose.onclick = removeTextarea;
+
+  // add title
+  var title = document.createElement("h1");
+  title.innerHTML = itemKey;
+  editor.appendChild(title);
+
   // add a textarea to editor window and fill with item value, or placeholder if a value does not exist yet
   var text = document.createElement("textarea");
   text.setAttribute("placeholder", "start writing...");
   text.setAttribute("spellcheck", "false");
   text.value = localStorage.getItem(itemKey);
   editor.appendChild(text);
+  
   document.querySelector("main").appendChild(editor);
   // set focus on textarea and count chars of text
   text.focus();
